@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Schools</title>
+        <link rel="stylesheet" href="stylee.css">
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+     </head>
+
+     <body>
+    
+            <nav>
+                
+                <img src="images/logo.png" alt="">
+              
+                <div class="navigation">
+                    <ul>
+                        <i class='bx bx-x' id="menu-close"></i>
+                        <li> <a class="active" href="index.html">Home</a></li>
+                        <li> <a class="active" href="aboutopt.html">About</a></li>
+                        <li> <a href="books.html">Books</a></li>
+                        <li><a href="subjects.html">Subjects</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+                    </ul>
+                    <i class='bx bx-menu-alt-right' id="menu-btn"></i>
+                </div>
+            </nav>
+
+            <section class="contact" id="contact">
+                <h1 class="heading"> <span>contact</span> us</h1>
+                
+                <div class="row">
+                   <img src="images/sign up.jfif" alt="">
+                
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <h3>Contact us</h3>
+                        <input type="text" placeholder="name" class="box">
+                        <input type="email" placeholder="email" class="box">
+                        <input type="number" placeholder="number" class="box">
+                        <textarea placeholder="message" class="box" cols="30" rows="10"></textarea>
+                        <input type="submit" value="send message" class="btn">
+                        
+                    </form>
+                    
+                </div>
+                
+                </section>
+       
+
+
+
+
+                <footer>
+                    <div class="footer-col">
+                        <h3>Top Products</h3>
+                        <li>Manage reputation</li>
+                        <li>Power Tool</li>
+                        <li>Manage Website</li>
+                        <li>Marketing Service</li>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <li>Jobs</li>
+                        <li>Brand Assets</li>
+                        <li>Investor Relations</li>
+                        <li>Marketing Service</li>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h3>Feauture</h3>
+                        <li>Manage reputation</li>
+                        <li>Power Tool</li>
+                        <li>Manage Website</li>
+                        <li>Marketing Service</li>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h3>Resourses</h3>
+                        <li>Manage reputation</li>
+                        <li>Power Tool</li>
+                        <li>Manage Website</li>
+                        <li>Marketing Service</li>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h3>News Letter</h3>
+                        <p>Latest School News</p>
+                        <div class="subscribe">
+                            <input type="text" placeholder="Email Address">
+                            <a class="yellow"  href="#">Subcribe</a>
+                        </div>
+    
+    
+    
+                       
+                    </div>
+    
+    
+                    <div class="copyright">
+                        <p>Copyright © 2023 designed by <span> Code-X </span> All Rights Reserved.
+                        </p>
+                        <div class="prolinks">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-whatsapp'></i>
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                    </div>
+    
+                </footer>
+            
+            <script>
+                $('#menu-btn').click(function(){
+                    $('nav .navigation ul').addClass('active')
+                });
+
+                $('#menu-close').click(function(){
+                    $('nav .navigation ul').removeClass('active')
+                });
+            </script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "kutapiratapex@gmail.com",
+    Password : "Jesusisl0rd",
+    To : 'kutapiratapex@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
+    
+</script>
+
+</body>
+</html>
